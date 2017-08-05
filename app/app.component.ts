@@ -2,10 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { User } from './shared/models/user';
 import { UserService } from './shared/services/user.service';
+import { UserComponent } from './users/users.component';
 
 @Component({
   selector: 'my-app',
   template: `
+    <my-users></my-users>
+
     <div class="jumbotron">
       <h1>Welcome to Our App!</h1>
     </div>

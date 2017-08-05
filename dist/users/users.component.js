@@ -10,25 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var user_service_1 = require("./shared/services/user.service");
-var AppComponent = (function () {
-    function AppComponent(service) {
-        this.service = service;
+var UserComponent = (function () {
+    function UserComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        // grab users
-        this.service.getUsers()
-            .subscribe(function (users) { return _this.users = users; });
-    };
-    AppComponent = __decorate([
+    UserComponent.prototype.ngOnInit = function () { };
+    UserComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <my-users></my-users>\n\n    <div class=\"jumbotron\">\n      <h1>Welcome to Our App!</h1>\n    </div>\n    <div *ngIf=\"users\">\n      <div *ngFor=\"let user of users\">\n        <h2>{{ user.first_name }}</h2>\n      </div>\n    </div>\n  "
+            selector: 'my-users',
+            templateUrl: './app/users/users.component.html'
         }),
-        __metadata("design:paramtypes", [user_service_1.UserService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata("design:paramtypes", [])
+    ], UserComponent);
+    return UserComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.UserComponent = UserComponent;
+//# sourceMappingURL=users.component.js.map
